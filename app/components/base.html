@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- <meta property="og:image" content="path/to/image.jpg"> -->
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <meta name="theme-color" content="#008fc1">
+</head>
+<body>
+	<link rel="stylesheet" href="css/style.css" lazyload>
+	<script src="js/bundle.js" defer></script>
+    {% include './header.html' %}
+	{% block content %}{% endblock %}
+    <footer class="footer">
+        <div class="container">
+            <span class="footer__copyright">© 2018 FSVOK</span>
+        </div>
+    </footer>
+    {% include './popups.html' %}
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% set title = 'Login' %}
+{% extends './components/base.html' %}
+
+{% block content %}
+
+	<section class="login">
+		<div class="container">
+			<form action="#" class="login__popup popup__form card">
+				<div class="popup__form-error"></div>
+				<label class="input">
+					<h4 class="input__label">Логин</h4>
+					<input name="login" type="text" class="input__input" placeholder="Введите ваш логин">
+				</label>
+				<label class="input">
+					<h4 class="input__label">Пароль</h4>
+					<input name="password" type="password" class="input__input" placeholder="Введите ваш пароль">
+				</label>
+				<button class="button button--center button--200">Войти</button>
+			</form>
+		</div>
+	</section>
+
+{% endblock %}

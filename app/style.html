@@ -1,0 +1,194 @@
+{% set title = 'Styleguide' %}
+{% extends './components/base.html' %}
+
+{% block content %}
+
+	<section class="container">
+		<div class="card">
+			<h1>Heading 1</h1>
+			<h2>Heading 2</h2>
+			<h3>Heading 3</h3>
+			<h4>Heading 4</h4>
+			<h5>Heading 5</h5>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut repellendus repellat consequuntur animi veritatis, illo dignissimos, magni ipsam! Sit blanditiis tempora explicabo deserunt quos itaque fuga amet, sint est earum.
+			</p>
+			<a href="#" class="button">Button</a>
+			<a href="#" class="button button--ghost">Button 2</a>
+			<a href="#" class="button button--ghost button--circle">3</a>
+			<a href="#" class="button button--circle button--min">
+				<i class="fas fa-comments"></i>
+				<span class="button__notification">!</span>
+			</a>
+			<a href="#" class="button button--min">Button 5</a>
+			<div class="button-toggle">
+				<a href="#" class="button button--ghost">Основное</a>
+				<a href="#" class="button button--ghost active">WBC: типы</a>
+				<a href="#" class="button button--ghost">WBC: клетки</a>
+				<a href="#" class="button button--ghost">RBC</a>
+			</div>
+			<label class="input">
+				<h4 class="input__label">Логин</h4>
+				<input name="" type="text" class="input__input" placeholder="Логин">
+			</label>
+			<label class="input input--autocomplete">
+				<h4 class="input__label">Поиск</h4>
+				<input name="" type="text" class="input__input" placeholder="Поиск">
+				<span class="input--autocomplete__list card">
+					<a href="#" class="input--autocomplete__item">lorem</a>
+					<a href="#" class="input--autocomplete__item">ipsum</a>
+					<a href="#" class="input--autocomplete__item">dolor</a>
+				</span>
+			</label>
+			<label class="textarea">
+				<h4 class="textarea__label">Описание</h4>
+				<textarea name="" class="textarea__input" placeholder="Описание"></textarea>
+			</label>
+			<div class="select__wrap">
+				<select name="" class="select">
+					<option value="CBC" selected>CBC</option>
+					<option value="DS">DS</option>
+				</select>
+			</div>
+			<div class="radio__wrap">
+				<label class="radio">
+					<input type="radio" name="radio" class="radio__input">
+					<span class="radio__circle"></span>
+					<h5 class="radio__label">Radio 1</h5>
+				</label>
+				<label class="radio">
+					<input type="radio" name="radio" class="radio__input">
+					<span class="radio__circle"></span>
+					<h5 class="radio__label">Radio 2</h5>
+				</label>
+				<label class="radio">
+					<input type="radio" name="radio" class="radio__input">
+					<span class="radio__circle"></span>
+					<h5 class="radio__label">Radio 3</h5>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox" name="radio" class="checkbox__input">
+					<span class="checkbox__rect"><i class="fas fa-check"></i></span>
+					<h5 class="checkbox__label">Checkbox 1</h5>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox" name="radio" class="checkbox__input">
+					<span class="checkbox__rect"><i class="fas fa-check"></i></span>
+					<h5 class="checkbox__label">Checkbox 2</h5>
+				</label>
+				<div class="file-input__wrap">
+					<label class="file-input">
+						<input type="file" class="file-input__input" accept="image/*">
+						<span class="file-input__label">Выберите изображение</span>
+					</label>
+					<div class="file-input__preview">
+						<img class="file-input__preview-img">
+					</div>
+				</div>
+				<div class="file-input__wrap file-input__wrap--profile">
+					<div class="file-input__preview">
+						<img src="img/icons/user.svg" class="file-input__preview-img">
+					</div>
+					<label class="file-input">
+						<input type="file" class="file-input__input" accept="image/*">
+						<span class="file-input__label">Выберите изображение</span>
+					</label>
+				</div>
+				<div class="file-input__wrap file-input__wrap-multiple">
+					<div class="file-input__preview img-preview__wrap">
+						<a data-fancybox="upload" href="img/icons/user.svg" class="img-preview">
+							<div class="img-preview__overlay"></div>
+							<i class="fas fa-link img-preview__icon"></i>
+							<img src="img/icons/user.svg" class="img-preview__img">
+						</a>
+						<a data-fancybox="upload" href="img/icons/user.svg" class="img-preview">
+							<div class="img-preview__overlay"></div>
+							<i class="fas fa-link img-preview__icon"></i>
+							<img src="img/icons/user.svg" class="img-preview__img">
+						</a>
+					</div>
+					<label class="file-input">
+						<input type="file" class="file-input__input" accept="image/*" multiple>
+						<span class="file-input__label">Выберите изображения</span>
+					</label>
+					<div class="range">
+						<input type="range" class="range__input" min="0" max="10" step="1" value="0">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="container">
+		<div class="card card--nopadding">
+			<div class="table__wrap">
+				<table class="table" cellpadding="0" cellspacing="0">
+					<tr>
+						<th></th>
+						<th>ID</th>
+						<th>Название теста</th>
+						<th>Статус</th>
+						<th>Дата</th>
+						<th>Тип</th>
+					</tr>
+					<tr>
+						<td>
+							<label class="checkbox">
+								<input type="checkbox" name="radio" class="checkbox__input">
+								<span class="checkbox__rect"><i class="fas fa-check"></i></span>
+							</label>
+						</td>
+						<td>1</td>
+						<td>Проба общего анализа крови 1</td>
+						<td>Загружено</td>
+						<td>21.05.2018</td>
+						<td>CBC</td>
+					</tr>
+					<tr class="active">
+						<td>
+							<label class="checkbox">
+								<input type="checkbox" name="radio" class="checkbox__input">
+								<span class="checkbox__rect"><i class="fas fa-check"></i></span>
+							</label>
+						</td>
+						<td>2</td>
+						<td>Проба общего анализа крови 2</td>
+						<td>Загружено</td>
+						<td>21.05.2018</td>
+						<td>CBC</td>
+					</tr>
+					<tr class="hilight">
+						<td>
+							<label class="checkbox">
+								<input type="checkbox" name="radio" class="checkbox__input">
+								<span class="checkbox__rect"><i class="fas fa-check"></i></span>
+							</label>
+						</td>
+						<td>3</td>
+						<td>Проба общего анализа крови 3</td>
+						<td>Загружено</td>
+						<td>21.05.2018</td>
+						<td>CBC</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<section class="numeration-wrap card">
+		<div class="numeration">
+			<a href="#" class="numeration__button numeration__prev"><i class="fas fa-angle-left"></i></a>
+
+			<a href="#" class="numeration__link">1</a>
+			<span class="numeration__span">...</span>
+			<a href="#" class="numeration__link">4</a>
+			<span href="#" class="numeration__link numeration__current">5</span>
+			<a href="#" class="numeration__link">6</a>
+			<span class="numeration__span">...</span>
+			<a href="#" class="numeration__link">10</a>
+
+			<a href="#" class="numeration__button numeration__next"><i class="fas fa-angle-right"></i></a>	
+		</div>
+	</section>
+
+{% endblock %}

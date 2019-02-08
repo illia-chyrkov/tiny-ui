@@ -1,0 +1,130 @@
+.container
+	max-width: 1200px
+	box-sizing: border-box
+	padding: 0 15px
+	margin: 0 auto
+	position: relative
+	
+	+r(1200)
+		max-width: 990px
+	
+	+r(992)
+		max-width: 750px
+
+	+r(768)
+		max-width: 570px
+
+	+r(576)
+		max-width: 100%
+	
+.row
+	display: flex
+	margin: 0 -15px
+	
+	&.row--vc
+		-webkit-align-items: center
+		align-items: center
+	
+	&.row--hc
+		-webkit-justify-content: center
+		justify-content: center
+	
+	&.row--jb
+		-webkit-justify-content: space-between
+		justify-content: space-between
+	
+.col
+	flex-basis: 100%
+	padding: 0 15px
+	box-sizing: border-box
+	
+	&.col--max-50
+		max-width: 50%
+	
+.hide-1200
+	+r(1200)
+		display: none !important
+
+.hide-992
+	+r(992)
+		display: none !important
+
+.hide-768
+	+r(768)
+		display: none !important
+
+.hide-576
+	+r(576)
+		display: none !important
+		
+.show-1200
+	display: none
+	visibility: hidden
+	
+	+r(1200)
+		display: block
+		visibility: visible
+
+.show-992
+	display: none
+	visibility: hidden
+	
+	+r(992)
+		display: block
+		visibility: visible
+
+.show-768
+	display: none
+	visibility: hidden
+	
+	+r(768)
+		display: block
+		visibility: visible
+
+.show-576
+	display: none
+	visibility: hidden
+	
+	+r(576)
+		display: block
+		visibility: visible
+		
+.block-on-1200
+	+r(1200)
+		display: block
+		
+.block-on-992
+	+r(992)
+		display: block
+		
+.block-on-768
+	+r(768)
+		display: block
+		
+.block-on-576
+	+r(576)
+		display: block
+		
+=container-no-borders
+	display: grid
+	grid-template-columns: 1fr repeat(12, 97.5px) 1fr
+	
+	+r(1200)
+		grid-template-columns: 1fr repeat(12, 82.5px) 1fr
+	
+	+r(992)
+		grid-template-columns: 1fr repeat(12, 62.5px) 1fr
+
+	+r(768)
+		grid-template-columns: 1fr repeat(12, 47.5px) 1fr
+
+	+r(576)
+		grid-template-columns: 0px repeat(12, 1fr) 0px
+	
+	&:before,
+	&:after
+		content: ''
+		
+	> *
+		padding: 0 15px
+		box-sizing: border-box
