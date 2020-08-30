@@ -509,6 +509,9 @@ input[type="checkbox"]:checked+.checkbox__rect
 			
 		.file-input__preview-img
 			width: 50px
+			height: 50px
+			object-fit: cover
+			object-position: 50% 50%
 			
 		.file-input
 			flex-basis: calc(100% - 50px - 16px)
@@ -536,6 +539,41 @@ input[type="checkbox"]:checked+.checkbox__rect
 	max-width: 100%
 	max-height: 400px
 	margin: 0 auto 8px
+
+.img-preview
+	display: inline-block
+	width: 100px
+	height: 100px
+	position: relative
+	color: #fff
+	text-decoration: none
+
+	&:hover .img-preview__icon
+		opacity: 1
+
+.img-preview__overlay
+	position: absolute
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	z-index: 1
+	background: rgba(#000, .35)
+
+.img-preview__icon
+	position: absolute
+	bottom: 10px
+	left: 10px
+	z-index: 2
+	opacity: 0.5
+	transition: opacity .2s ease-in-out
+
+.img-preview__img
+	display: block
+	width: 100%
+	height: 100%
+	object-fit: cover
+	object-position: 50% 50%
 
 .numeration-wrap
 	margin: 16px auto
